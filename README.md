@@ -4,9 +4,16 @@ Parse Nginx, Apache, Proftpd or any other logs and send them to [sirvlog](https:
 
 Sample configurations are available in conf.d.example
 
+### See also
+
+  * [sirvlog](https://github.com/magictoolbox/sirvlog)
+  * [sirvlog web frontend](https://github.com/magictoolbox/sirvlog-web)
+  * [service healh monitors for sirvlog](https://github.com/magictoolbox/sirvlog-monitors)
+
 ## Authors
 
 **Oleksiy Krivoshey**
+
   * [https://github.com/oleksiyk](https://github.com/oleksiyk)
 
 # License (MIT)
