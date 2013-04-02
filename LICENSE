@@ -1,17 +1,4 @@
-# sirvlog-parser
-
-Parse Nginx, Apache, Proftpd or any other logs and send them to [sirvlog](https://github.com/magictoolbox/sirvlog) server
-
-Sample configurations are available in conf.d.example
-
-## Authors
-
-**Oleksiy Krivoshey**
-  * [https://github.com/oleksiyk](https://github.com/oleksiyk)
-
-# License (MIT)
-
-Copyright (c) 2013 Magic Toolbox.
+Copyright (c) 2013 Magic Toolbox
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -33,4 +20,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-

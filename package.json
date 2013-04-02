@@ -1,0 +1,40 @@
+{
+    "author": {
+        "name": "Oleksiy Krivoshey",
+        "email": "<oleksiyk@gmail.com>"
+    },
+    "name": "sirvlog-parser",
+    "description": "Parse logs from apache, nginx, proftpd, etc and send them to sirvlog",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "dependencies":{
+        "sirvlog": "1.0.0",
+        "csv": ">=0.0.0",
+        "optimist": ">=0.3.5",
+        "clim": ">=1.0.0",
+        "underscore": ">=1.4.4",
+        "async": ">=0.2.5"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "bugs": {
+        "url": "https://github.com/magictoolbox/sirvlog-parser/issues"
+    },
+    "readmeFilename": "README.md",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/magictoolbox/sirvlog-parser.git"
+    },
+    "keywords": [
+        "log server",
+        "logs",
+        "sirvlog",
+        "parser",
+        "magictoolbox",
+        "elasticsearch"
+    ],
+    "license": "MIT"
+}
