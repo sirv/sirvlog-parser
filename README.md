@@ -1,14 +1,14 @@
 # sirvlog-parser
 
-Parse Nginx, Apache, Proftpd or any other logs and send them to [sirvlog](https://github.com/magictoolbox/sirvlog) server
+Parse Nginx, Apache, Proftpd or any other logs and send them to [sirvlog](https://github.com/sirv/sirvlog) server
 
 Sample configurations are available in conf.d.example
 
 ### See also
 
-  * [sirvlog](https://github.com/magictoolbox/sirvlog)
-  * [sirvlog web frontend](https://github.com/magictoolbox/sirvlog-web)
-  * [service healh monitors for sirvlog](https://github.com/magictoolbox/sirvlog-monitors)
+  * [sirvlog](https://github.com/sirv/sirvlog)
+  * [sirvlog web frontend](https://github.com/sirv/sirvlog-web)
+  * [service healh monitors for sirvlog](https://github.com/sirv/sirvlog-monitors)
 
 ## Authors
 
@@ -18,7 +18,7 @@ Sample configurations are available in conf.d.example
 
 # License (MIT)
 
-Copyright (c) 2013 Magic Toolbox.
+Copyright (c) 2013 Sirv.
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
