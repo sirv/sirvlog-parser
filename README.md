@@ -8,7 +8,7 @@ Sample configurations are available in [conf.d.example](https://github.com/sirv/
 
   * Will remember file position for each logfile when stopped/started
   * Handles log files rotated by logrotate (so it wont miss a single record)
-  * Easy to configure new services as it can handle CSV files (quoted fields separated by whitespace for example) or just any log file. See [nginx](https://github.com/sirv/sirvlog-parser/blob/master/conf.d.example/nginx.conf.js) access_log as an example of CSV input and [xferlog](https://github.com/sirv/sirvlog-parser/blob/master/conf.d.example/xferlog.conf.js) as an example of free form log file
+  * Easy to configure new services as it can handle CSV files (quoted fields separated by whitespace for example) or just any log file. See [nginx access.log](https://github.com/sirv/sirvlog-parser/blob/master/conf.d.example/nginx.conf.js) as an example of CSV input (needs configured nginx log_format) and [proftpd xferlog](https://github.com/sirv/sirvlog-parser/blob/master/conf.d.example/xferlog.conf.js) as an example of free form log file
   * Filters (in Javascript) to parse (or modify) each log message
   
 Example of parsed message (as in [sirvlog web frontend](https://github.com/sirv/sirvlog-web) ):
