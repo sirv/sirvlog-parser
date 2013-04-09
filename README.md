@@ -2,7 +2,57 @@
 
 Parse Nginx, Apache, Proftpd or any other logs and send them to [sirvlog](https://github.com/sirv/sirvlog) server
 
-Sample configurations are available in conf.d.example
+Sample configurations are available in [conf.d.example](https://github.com/sirv/sirvlog-parser/tree/master/conf.d.example)
+
+### Features
+
+  * Will remember file position for each logfile when stopped/started
+  * Handles log files rotated by logrotate (so it wont miss a single record)
+  * Easy to configure new services as it can handle CSV files (quoted fields separated by whitespace for example) or just any log file. See [nginx access.log](https://github.com/sirv/sirvlog-parser/blob/master/conf.d.example/nginx.conf.js) as an example of CSV input (needs configured nginx log_format) and [proftpd xferlog](https://github.com/sirv/sirvlog-parser/blob/master/conf.d.example/xferlog.conf.js) as an example of free form log file
+  * Filters (in Javascript) to parse (or modify) each log message
+  
+Example of parsed message (as in [sirvlog web frontend](https://github.com/sirv/sirvlog-web) ):
+
+[<img src="https://dl.dropbox.com/u/102761139/sirvlog-web/sirvlog-parser.jpg" width="600px"/>](https://dl.dropbox.com/u/102761139/sirvlog-web/sirvlog-parser.jpg)
+
+### Running as [supervisord](http://supervisord.org/) service
+
+[supervisord](http://supervisord.org/) is a great tool to run your Node apps as it allows you to have full control over running services (as well as [monitoring their health status](https://github.com/sirv/sirvlog-monitors) )
+
+So the typical config will be
+
+``` sh
+$ cat /etc/supervisor.d/sirvlog-parser.conf
+```
+
+``` sh
+[program:sirvlog-parser]
+command=/home/nvm/v0.10.2/bin/node /home/sirvlog-parser/src/app.js --config /home/sirvlog-parser/config.js
+process_name=sirvlog-parser
+numprocs=1
+numprocs_start=0
+autostart=true
+autorestart=true
+startsecs=1
+startretries=3
+exitcodes=0,2
+stopsignal=TERM
+stopwaitsecs=10
+user=ubuntu
+redirect_stderr=true
+stdout_logfile=/home/sirvlog-parser/logs/sirvlog-parser.log
+stdout_logfile_maxbytes=50MB
+stdout_logfile_backups=10
+stdout_capture_maxbytes=0
+stdout_events_enabled=false
+stderr_logfile=AUTO
+stderr_logfile_maxbytes=50MB
+stderr_logfile_backups=10
+stderr_capture_maxbytes=0
+stderr_events_enabled=false
+serverurl=AUTO
+```
+
 
 ### See also
 
